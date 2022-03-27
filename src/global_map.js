@@ -59,7 +59,7 @@ async function addNewParticipants(map, participantsStartValue) {
 function getCreateValueSignalFunction(participantsStartValue) {
   let createValueSignal
   if (typeof participantsStartValue === 'number') {
-    createValueSignal = GlobalCounter.createGlobalCounterSignal
+    createValueSignal = GlobalCounter.createGlobalScalarSignal
   } else if (typeof participantsStartValue === 'string') {
     createValueSignal = GlobalString.createGlobalStringSignal
   } else {
